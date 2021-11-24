@@ -37,15 +37,85 @@ Cuando un conjunto de usuarios consulta un enésimo número (superior a 1000000)
 
 5. Modifique la coleción de POSTMAN con NEWMAN de tal forma que pueda enviar 10 peticiones concurrentes. Verifique los resultados y presente un informe.
 
+![](images/punto2.PNG)
+![](images/punto2.2.PNG)
+![](images/punto2.3.PNG)
+
+Se realizaron las 10 peticiones de forma recurrente y logramos observar el consumo de memoria que presento la funcion
+de aproximadamente 200MB al realizar fibonacci de 1000000
+
 6. Cree una nueva Function que resuleva el problema de Fibonacci pero esta vez utilice un enfoque recursivo con memoization. Pruebe la función varias veces, después no haga nada por al menos 5 minutos. Pruebe la función de nuevo con los valores anteriores. ¿Cuál es el comportamiento?.
+
+Codigo fibonacci recurrente con memorizacion;
+
+![](images/fibonacci.PNG)
+
+primeras 10 veses
+
+![](images/punto3.PNG)
+![](images/punto3.1.PNG)
+
+No se ejecuto ninguna peticion de forma correta debido a que el numero es demaciado grande con fibonacci 1000000
+
+![](images/punto3.2.PNG)
+
+Podemos ver que el consumo y el tiempo que le tomo a la funcion en realizar la peticiones son bastante notorios ya que
+le toma menos memoria y menos tiempo en responder la peticiones.
+
+
+Pasados 5 minutos
+
+![](images/punto3.5.PNG)
+![](images/punto3.6.PNG)
+![](images/punto3.7.PNG)
+
+Podemos ver que el tiempo que toma en responder las peticiones es el mismo pero el consumo de memoria es menor a las primeras 20 peticiones
+realizadas anteriormente
+
 
 **Preguntas**
 
 * ¿Qué es un Azure Function?
+
+Azure Functions es un servicio en la nube disponible bajo demanda que proporciona toda la infraestructura y los recursos continuamente 
+actualizados necesarios para ejecutar sus aplicaciones. Usted se concentra en los fragmentos de código que más le importan y Functions 
+se encarga del resto. Functions proporciona procesamiento sin servidor para Azure.
+
 * ¿Qué es serverless?
+
+es un modelo de ejecución en el que el proveedor en la nube (AWS, Azure o Google Cloud) es responsable de ejecutar 
+un fragmento de código mediante la asignación dinámica de los recursos. Y cobrando solo por la cantidad de recursos 
+utilizados para ejecutar el código. El código, generalmente, se ejecuta dentro de contenedores sin estado que pueden 
+ser activados por una variedad de eventos que incluyen solicitudes HTTP, eventos de base de datos, servicios de colas, 
+alertas de monitoreo, carga de archivos, eventos programados (trabajos cron), etc. El código que se envía a al proveedor 
+en la nube para la ejecución es generalmente en forma de una función.
+
 * ¿Qué es el runtime y que implica seleccionarlo al momento de crear el Function App?
+
+para implementar funciones integradas en un lenguaje de programación, durante el tiempo de ejecución (ejecución)de un programa de computadora.
+Esto a menudo incluye funciones de entrada y salida, o para la gestión de la memoria.
+
 * ¿Por qué es necesario crear un Storage Account de la mano de un Function App?
+
+contiene todos los objetos de datos de Azure Storage: blobs, recursos compartidos de archivos, colas, tablas y discos. 
+La cuenta de almacenamiento proporciona un espacio de nombres único para los datos de Azure Storage que es accesible desde cualquier 
+lugar del mundo mediante HTTP o HTTPS.
+
 * ¿Cuáles son los tipos de planes para un Function App?, ¿En qué se diferencias?, mencione ventajas y desventajas de cada uno de ellos.
+
+consumo(sin servicio)
+Functions premium
+plan de app service
+
+
 * ¿Por qué la memoization falla o no funciona de forma correcta?
+
+Debido que el tiempo que le toma en realizar la peticion es el mismo siempre y esta esta realizando consumo de memoria apesar que se esta
+realizando la memorizacion del numero de fibonacci.
+
 * ¿Cómo funciona el sistema de facturación de las Function App?
+
+El modo de facturacion se realiza por el numero de peticiones que resiva el sitio y por el consumo de memoria que este genere
+
+
 * Informe
